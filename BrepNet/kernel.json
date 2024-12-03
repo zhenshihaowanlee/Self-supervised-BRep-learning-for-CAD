@@ -1,0 +1,61 @@
+{
+  "face_to_edge": {
+    "source": "faces",
+    "target": "edges",
+    "relation": [
+      "e", 
+      "ne", 
+      "pe", 
+      "mne", 
+      "mpe", 
+      "nmne", 
+      "pmpe", 
+      "mnmne", 
+      "mpmpe" 
+    ]
+  },
+  "edge_to_vertex": {
+    "source": "edges",
+    "target": "vertices",
+    "relation": [
+      "v", 
+      "mv",
+      "nv", 
+      "pv", 
+      "mnv", 
+      "mpv" 
+    ]
+  },
+  "face_to_face": {
+    "source": "faces",
+    "target": "faces",
+    "relation": [
+      "f", 
+      "mf", 
+      "nf", 
+      "pf", 
+      "mnf", 
+      "mpf" 
+    ]
+  },
+  "coedge_to_edge": {
+    "source": "coedges",
+    "target": "edges",
+    "relation": [
+      "e", 
+      "re", 
+      "me", 
+      "rme" 
+    ]
+  },
+  "coedge_to_face": {
+    "source": "coedges",
+    "target": "faces",
+    "relation": [
+      "f", 
+      "rf", 
+      "mf", 
+      "rmf" 
+    ]
+  }
+}
