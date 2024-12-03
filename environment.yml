@@ -1,6 +1,7 @@
 name:self-supervised
 channel:
   - conda-forge
+  - defaults
 dependencies:
 python
 scipy.spatial
