@@ -1,0 +1,11 @@
+name:self-supervised
+channel:
+  - conda-forge
+dependencies:
+python
+scipy.spatial
+numpy<2.0
+pythonocc-core
+torch
+torch_scatter
+torch_geometric
