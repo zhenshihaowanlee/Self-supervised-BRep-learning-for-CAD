@@ -6,6 +6,9 @@ python
 scipy.spatial
 numpy<2.0
 pythonocc-core
-torch
+pytorch
 torch_scatter
 torch_geometric
+scikit-learn
+occwl
+jupyter
