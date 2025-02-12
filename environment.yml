@@ -1,4 +1,4 @@
-name:self-supervised
+name:self-supervised learning
 channel:
   - conda-forge
   - defaults
