@@ -43,5 +43,5 @@ Here are the result based on self-prepared datasets:
 
 
 
-# **Quick Start instructions**
+# **Quickstart instructions**
 
