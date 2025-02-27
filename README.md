@@ -30,7 +30,13 @@ We move to another strategy to create a python-based model generator and we can 
 The weakness is the complexity of the generated model is not high which may influence the performance of the pre-training result.
 
 
-# ** SSL validation experiment**
+# **SSL validation experiment**
 We get the simplified typical datasets from the data generator and use the BRep data as input for the encoder-decoder to **minimize the L2 loss**.
 
 Here are the result based on self-prepared datasets:
+
+
+# **Future work**
+- Larger dataset preparation and data preprocessing necessary.
+- Computation nodes(A100/H100 * 4 server) for the large-scale training.
+- Few shot learning by pretraining + downstream GCN for modelling segmentation/machining segmentation/part classification
