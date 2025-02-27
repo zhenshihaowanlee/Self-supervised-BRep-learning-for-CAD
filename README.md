@@ -51,5 +51,7 @@ We don not need GPU for this repository. Please make sure the correct environmen
 
 ### **Dataset preparation**
 
+You can prepare your own BRep dataset for the encoder by the file **data_generator**. (modification for the local data)
 
+After you get the output embeddings from the encoder, run the file **sample_data** and get the input of the decoder for the rasterization.
 
