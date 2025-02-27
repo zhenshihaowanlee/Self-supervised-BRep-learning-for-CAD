@@ -1,8 +1,8 @@
 # **Overview**
 
 This repository mainly focuses on proving the feasibility of the self-supervised hierarchical encoder-decoder network which means we mainly focus on the first and second part of the figure below:
-- ## Data preprocessing
-- ## Encoder-decoder L2 loss minimization
+- *Data preprocessing*
+- *Encoder-decoder L2 loss minimization*
 ![image](https://github.com/user-attachments/assets/528f34d8-9f0e-4bac-86e6-a8b925c73020)
 *Figure 1. Overview of ssl for CAD models*
 
