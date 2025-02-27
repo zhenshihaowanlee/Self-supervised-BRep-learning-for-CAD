@@ -12,7 +12,7 @@ This repository mainly focuses on proving the feasibility of the self-supervised
 
 For the input data of the encoder we need to extract BRep data and after that **transform the BRep data into the form which can suit the encoder structure** well to generate embeddings
 
-## **1.BRep data extraction from Fusion 360**
+## **1. BRep data extraction from Fusion 360**
 
 The Brep_data extraction part is modified by BrepNet.
 
@@ -21,5 +21,16 @@ The Brep_data extraction part is modified by BrepNet.
 
 *(The source: https://github.com/AutodeskAILab/BRepNet/blob/master/docs/building_your_own_dataset.md)*
 
+## **2. Alternative method: data generator**
 
-3.For the further application we still need to combine it with downstream task GCN(segmentation/classification)
+For the feasibility test we don't need large dataset to test the algorithms of the encoder-decoder structure.
+
+We move to another strategy to create a python-based model generator and we can **extract the BRep data within the generator** without additional operations.
+
+The weakness is the complexity of the generated model is not high which may influence the performance of the pre-training result.
+
+
+# ** SSL validation experiment**
+We get the simplified typical datasets from the data generator and use the BRep data as input for the encoder-decoder to **minimize the L2 loss**.
+
+Here are the result based on self-prepared datasets:
