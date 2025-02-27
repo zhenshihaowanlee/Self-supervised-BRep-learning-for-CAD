@@ -47,5 +47,9 @@ Here are the result based on self-prepared datasets:
 
 ### **Setting up the environment**
 
-We don not need GPU for this repository. Please make sure the correct environment configuration according to the file environment.yml
+We don not need GPU for this repository. Please make sure the correct environment configuration according to the file **environment.yml**.
+
+### **Dataset preparation**
+
+
 
