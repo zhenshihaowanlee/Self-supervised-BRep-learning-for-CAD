@@ -40,3 +40,8 @@ Here are the result based on self-prepared datasets:
 - Larger dataset preparation and data preprocessing necessary.
 - Computation nodes(A100/H100 * 4 server) for the large-scale training.
 - Few shot learning by pretraining + downstream GCN for modelling segmentation/machining segmentation/part classification
+
+
+
+# **Quick Start instructions**
+
