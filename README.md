@@ -51,9 +51,13 @@ We don not need GPU for this repository. Please make sure the correct environmen
 
 ### **Dataset preparation**
 
-You can prepare your own BRep dataset for the encoder by the file **data_generater**(modification for the local data).
+You can prepare your own BRep dataset for the encoder by the file **data_generater.py**(modification for the local data).
 
-After you get the output embeddings from the encoder, run the file **sampled_data** and get the input of the decoder for the rasterization.
+After you get the output embeddings from the encoder, run the file **sampled_data.py** and get the input of the decoder for the rasterization.
 
-You can find the files in the Example data folder.
+You can find the files in the Example_data folder.
+
+### **Pre-training of the encoder-decoder structure**
+
+Prepare the two flies named **encoder.py** and **decoder.py** locally and run the code below:
 
