@@ -10,7 +10,16 @@ This repository mainly focuses on proving the feasibility of the self-supervised
 
 # **Data preprocessing**
 
-2.The Brep_data extraction part is modified by BrepNet https://github.com/AutodeskAILab/BRepNet/blob/master/docs/building_your_own_dataset.md
+For the input data of the encoder we need to extract BRep data and after that **transform the BRep data into the form which can suit the encoder structure** well to generate embeddings
+
+## **1.BRep data extraction from Fusion 360**
+
+The Brep_data extraction part is modified by BrepNet.
+
 ![image](https://github.com/user-attachments/assets/31ed605b-fd09-4953-ad74-292974f4b308)
+*Figure 2. Pipeline of BRep extraction*
+
+*(The source: https://github.com/AutodeskAILab/BRepNet/blob/master/docs/building_your_own_dataset.md)*
+
 
 3.For the further application we still need to combine it with downstream task GCN(segmentation/classification)
