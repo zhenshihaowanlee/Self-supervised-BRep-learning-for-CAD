@@ -1,4 +1,4 @@
-1.This repository mainly focuses on the feasibility of this self-supervised hierarchical network
+1.This repository mainly focuses on proving the feasibility of the self-supervised hierarchical encoder-decoder network
 ![image](https://github.com/user-attachments/assets/528f34d8-9f0e-4bac-86e6-a8b925c73020)
 The source paper:https://openaccess.thecvf.com/content/CVPR2023/html/Jones_Self-Supervised_Representation_Learning_for_CAD_CVPR_2023_paper.html
 
