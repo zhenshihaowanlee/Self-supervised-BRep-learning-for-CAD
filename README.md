@@ -46,3 +46,6 @@ Here are the result based on self-prepared datasets:
 # **Quickstart instructions**
 
 ### **Setting up the environment**
+
+We don not need GPU for this repository. Please make sure the correct environment configuration according to the file environment.yml
+
