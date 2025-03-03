@@ -34,7 +34,8 @@ The weakness is the complexity of the generated model is not high which may infl
 We get the simplified typical datasets from the data generator and use the BRep data as input for the encoder-decoder to **minimize the L2 loss**.
 
 Here are the result based on self-prepared datasets:
-
+![image](https://github.com/user-attachments/assets/ca29a498-d4e0-4492-8b57-ad4b48e380c0)
+*Figure 2. Training results over 4 datasets
 
 # **Future work**
 - Larger dataset preparation and data preprocessing necessary.
