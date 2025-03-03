@@ -63,5 +63,5 @@ You can find the files in the Example_data folder.
 
 Prepare the two flies named **encoder.py** and **decoder.py** (network folder) locally and run the code. Here is a simply example :
 
-'
+
 
