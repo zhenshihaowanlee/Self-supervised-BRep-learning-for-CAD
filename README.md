@@ -69,11 +69,12 @@ run the code below:
 
 '''python
 
-'encoder = CustomBRepEncoder(
+encoder = CustomBRepEncoder(
     v_in_width=3, e_in_width=6, f_in_width=7,
     out_width=64, num_layers=2, use_attention=True
 )
-'data2 = CylinderData(3, 6)'
+'data2 = CylinderData(3, 6)
+'''
 
 
 
