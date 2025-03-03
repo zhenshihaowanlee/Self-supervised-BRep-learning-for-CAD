@@ -45,7 +45,7 @@ Here are the result based on self-prepared datasets:
 
 
 
-# **Quickstart instructions**
+# **Quickstart instructions in Juypter notebook**
 
 ### **Setting up the environment**
 
@@ -62,6 +62,17 @@ You can find the files in the Example_data folder.
 ### **Pre-training of the encoder-decoder structure**
 
 Prepare the two flies named **encoder.py** and **decoder.py** (network folder) locally and run the code. Here is a simply example :
+
+### 1.data_generator
+
+run the code below:
+
+'encoder = CustomBRepEncoder(
+    v_in_width=3, e_in_width=6, f_in_width=7,
+    out_width=64, num_layers=2, use_attention=True
+)
+data2 = CylinderData(3, 6)'
+
 
 
 
