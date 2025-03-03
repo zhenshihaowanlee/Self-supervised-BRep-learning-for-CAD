@@ -63,6 +63,8 @@ You can find the files in the Example_data folder.
 
 Prepare the two flies named **encoder.py** and **decoder.py** (network folder) locally and run the code. Here is a simply example :
 
+Finish the environment configuration and prepare all the files as the quickstart instructions.
+
 ### 1.data_generator
 
 run the code below:
@@ -100,6 +102,157 @@ encoder = CustomBRepEncoder(
 )
 data4 = SphereData(4)
 print(encoder(data4))
+```
+### 2.sampled_data
+
+```python
+
+preprocessed_data = preprocess_data(encoder, data)
+
+decoder = ConditionalDecoder(latent_size=64, hidden_dims=[1024, 1024, 1024, 1024])
+
+optimizer = torch.optim.Adam(decoder.parameters(), lr=1e-3)
+
+preprocessed_data = torch.load("preprocessed_data.pt")
+
+n_epochs = 100
+
+losses = []
+
+for epoch in range(n_epochs):
+    total_loss = 0.0
+    for embedding, sampled_points, sampled_sdf in preprocessed_data:
+        
+        # Step 1: Decoder forward pass
+        decoder_input = torch.cat([embedding.unsqueeze(0).repeat(sampled_points.shape[0], 1), sampled_points], dim=-1)
+        predicted = decoder(sampled_points, embedding)
+
+        # Step 2: Compute ground-truth and loss
+        target_xyz = compute_xyz_from_uv(sampled_points).float()  # Compute ground-truth (x, y, z)
+        loss = compute_loss(predicted, target_xyz, sampled_sdf)
+        total_loss += loss.item()
+
+        # Step 3: Backward and optimize
+        optimizer.zero_grad()
+        loss.backward()  # retain_graph=False (默认行为)
+        optimizer.step()
+
+    average_loss = total_loss / len(preprocessed_data)
+    losses.append(average_loss)
+    print(f"Epoch {epoch + 1}/{n_epochs}, Loss: {average_loss}")
+```
+
+```python
+
+preprocessed_data_cylinder = preprocess_data_cylinder(encoder, data2)
+
+decoder = ConditionalDecoder(latent_size=64, hidden_dims=[1024, 1024, 1024, 1024])
+
+optimizer = torch.optim.Adam(decoder.parameters(), lr=1e-3)
+
+preprocessed_data_cylinder = torch.load("preprocessed_data_cylinder.pt")
+
+n_epochs = 100
+
+losses = []
+
+for epoch in range(n_epochs):
+    total_loss = 0.0
+    for embedding, sampled_points, sampled_sdf in preprocessed_data_cylinder:
+        
+        # Step 1: Decoder forward pass
+        decoder_input = torch.cat([embedding.unsqueeze(0).repeat(sampled_points.shape[0], 1), sampled_points], dim=-1)
+        predicted = decoder(sampled_points, embedding)
+
+        # Step 2: Compute ground-truth and loss
+        target_xyz = compute_xyz_from_uv(sampled_points).float()  # Compute ground-truth (x, y, z)
+        loss = compute_loss(predicted, target_xyz, sampled_sdf)
+        total_loss += loss.item()
+
+        # Step 3: Backward and optimize
+        optimizer.zero_grad()
+        loss.backward()  # retain_graph=False (默认行为)
+        optimizer.step()
+
+    average_loss = total_loss / len(preprocessed_data_cylinder)
+    losses.append(average_loss)
+    print(f"Epoch {epoch + 1}/{n_epochs}, Loss: {average_loss}")
+```
+
+```python
+preprocessed_data_cone = preprocess_data_cone(encoder, data3)
+
+decoder = ConditionalDecoder(latent_size=64, hidden_dims=[1024, 1024, 1024, 1024])
+
+optimizer = torch.optim.Adam(decoder.parameters(), lr=1e-3)
+
+preprocessed_data_cone = torch.load("preprocessed_data_cone.pt")
+print("Loaded preprocessed data.")
+
+# 训练代码
+n_epochs = 100
+
+losses = []
+
+for epoch in range(n_epochs):
+    total_loss = 0.0
+    for embedding, sampled_points, sampled_sdf in preprocessed_data_cone:
+        
+        # Step 1: Decoder forward pass
+        decoder_input = torch.cat([embedding.unsqueeze(0).repeat(sampled_points.shape[0], 1), sampled_points], dim=-1)
+        predicted = decoder(sampled_points, embedding)
+
+        # Step 2: Compute ground-truth and loss
+        target_xyz = compute_xyz_from_uv(sampled_points).float()  # Compute ground-truth (x, y, z)
+        loss = compute_loss(predicted, target_xyz, sampled_sdf)
+        total_loss += loss.item()
+
+        # Step 3: Backward and optimize
+        optimizer.zero_grad()
+        loss.backward()  # retain_graph=False (默认行为)
+        optimizer.step()
+
+    average_loss = total_loss / len(preprocessed_data_cone)
+    losses.append(average_loss)
+    print(f"Epoch {epoch + 1}/{n_epochs}, Loss: {average_loss}")
+```
+
+```python
+preprocessed_data_sphere = preprocess_data_sphere(encoder, data4)
+
+decoder = ConditionalDecoder(latent_size=64, hidden_dims=[1024, 1024, 1024, 1024])
+
+optimizer = torch.optim.Adam(decoder.parameters(), lr=1e-3)
+
+preprocessed_data_sphere = torch.load("preprocessed_data_sphere.pt")
+print("Loaded preprocessed data.")
+
+# 训练代码
+n_epochs = 100
+
+losses = []
+
+for epoch in range(n_epochs):
+    total_loss = 0.0
+    for embedding, sampled_points, sampled_sdf in preprocessed_data_sphere:
+        
+        # Step 1: Decoder forward pass
+        decoder_input = torch.cat([embedding.unsqueeze(0).repeat(sampled_points.shape[0], 1), sampled_points], dim=-1)
+        predicted = decoder(sampled_points, embedding)
+
+        # Step 2: Compute ground-truth and loss
+        target_xyz = compute_xyz_from_uv(sampled_points).float()  # Compute ground-truth (x, y, z)
+        loss = compute_loss(predicted, target_xyz, sampled_sdf)
+        total_loss += loss.item()
+
+        # Step 3: Backward and optimize
+        optimizer.zero_grad()
+        loss.backward()  # retain_graph=False (默认行为)
+        optimizer.step()
+
+    average_loss = total_loss / len(preprocessed_data_sphere)
+    losses.append(average_loss)
+    print(f"Epoch {epoch + 1}/{n_epochs}, Loss: {average_loss}")
 ```
 
 
