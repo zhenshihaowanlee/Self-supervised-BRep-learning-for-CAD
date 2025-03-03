@@ -103,7 +103,7 @@ encoder = CustomBRepEncoder(
 data4 = SphereData(4)
 print(encoder(data4))
 ```
-### 2.sampled_data
+### 2.sampled_data and L2 loss
 
 ```python
 
