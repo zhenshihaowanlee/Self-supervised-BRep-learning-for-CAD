@@ -73,9 +73,33 @@ encoder = CustomBRepEncoder(
     v_in_width=3, e_in_width=6, f_in_width=7,
     out_width=64, num_layers=2, use_attention=True
 )
-data2 = CylinderData(3, 6)
+data = CuboidData(2,3,4)
+print(encoder(data))
 ```
+```python
+encoder = CustomBRepEncoder(
+    v_in_width=3, e_in_width=6, f_in_width=7,
+    out_width=64, num_layers=2, use_attention=True
+)
+data2 = CylinderData(3, 6)
+print(encoder(data2))
 
-
+```
+```python
+encoder = CustomBRepEncoder(
+    v_in_width=3, e_in_width=6, f_in_width=7,
+    out_width=64, num_layers=2, use_attention=True
+)
+data3 = ConeData(2, 5)
+print(encoder(data3))
+```
+```python
+encoder = CustomBRepEncoder(
+    v_in_width=3, e_in_width=6, f_in_width=7,
+    out_width=64, num_layers=2, use_attention=True
+)
+data4 = SphereData(4)
+print(encoder(data4))
+```
 
 
