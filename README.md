@@ -61,7 +61,10 @@ You can find the files in the Example_data folder.
 
 ### **Pre-training of the encoder-decoder structure**
 
-Prepare the two flies named **encoder.py** and **decoder.py** (network folder) locally and run the code. Here is a simply example :
+Prepare the two flies named **encoder.py** and **decoder.py** (network folder) locally and run the code. 
+
+
+Here is a simply example :
 
 Finish the environment configuration and prepare all the files as the quickstart instructions.
 
